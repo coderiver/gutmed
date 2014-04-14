@@ -1,0 +1,51 @@
+body
+	font-size: 12px 
+	font-family: 'Exo 2', sans-serif
+	font-weight: 400 
+	line-height: 1.4
+
+.body
+	background: url('../img/naw-bg.jpg') no-repeat 50% 332px
+
+// wrapper
+.wrapper
+	margin: 0 auto
+	width: 1000px
+
+// header
+.header
+	background: url('../img/bg-top.png') repeat-x 51% 0
+
+.header__centr
+	margin: 0 auto
+	padding-top: 37px
+	width: 1000px
+	height: 170px
+	background: url('../img/bg-tcent.png') no-repeat 0 39px
+
+.header__logo
+	margin: 0 auto
+	display: block
+	+s(logo)
+
+.header__bot
+	margin-top: 12px
+	margin-left: -55px
+	color: #53BDF1 
+	font-family: 'Exo 2', sans-serif
+	font-weight: 500 
+	font-style: italic
+	text-align: center
+
+@media only screen and (max-width: 1920px)
+	.out
+		padding-bottom: 180px
+		position: relative
+		overflow: hidden
+		
+	.footer
+		position: absolute
+		bottom: 0
+		left: 50%
+		margin-left: -1010px
+		width: 2020px 

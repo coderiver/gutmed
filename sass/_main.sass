@@ -1,0 +1,187 @@
+// news
+.news
+	img
+		float: right
+	p
+		padding: 18px 0 
+	a
+		color: #4F9DCD 
+		font-size: 14px
+		text-decoration: none
+		border-bottom: 1px dotted #4F9DCD 
+		&:hover
+			border: none 
+.news__left
+	color: #6F838F
+
+.news__title
+	color: #007BC6 
+	font-size: 21px
+	font-weight: 400 
+	text-transform: uppercase
+	
+// naw
+.naw
+	margin: 36px 0 0 321px
+	width: 320px
+	font-size: 0
+	+clr
+
+.naw__item
+	float: left
+	width: 50%
+	height: 160px
+	img
+		width: 100%
+		
+.naw__item_l
+	background: #008BCD 
+	text-align: center
+	text-transform: uppercase
+	line-height: 188px 
+	vertical-align: middle
+	+box
+	a
+		font-size: 21px
+		color: #fff 
+		text-decoration: none
+		line-height: 1.2
+		display: inline-block
+		&:hover
+			text-decoration: underline
+	
+// footer
+.body
+	.footer
+		height: 180px
+		background: rgba(255, 255, 255, 0.87) 
+		background: url('../img/fbg-l.png') no-repeat 0 100%, url('../img/fbg-r.png') no-repeat 100% 100% 
+
+	.footer__bg
+		height: 180px
+		+gt(rgba(255,255,255,0) -25%, rgba(41,77,95,.67) 50%, rgba(255,255,255,0) 150%)
+		
+		.wrapper
+			font-size: 0
+	.contacts, .services, .reviews
+		padding: 30px 0 18px 
+		width: 32%
+		vertical-align: top
+		display: inline-block
+		+box
+		p
+			color: #A9E5FF 
+			font-size: 13px
+
+	.footer__title
+		padding-bottom: 15px
+		color: #FFF 
+		line-height: 1
+		font-size: 21px
+		font-weight: 400 
+		text-transform: uppercase
+		
+	.contacts
+		width: 341px
+		margin-left: -20px
+		+clr
+
+	.contacts__phone
+		float: left
+		
+	.phone
+		position: relative
+		margin-bottom: 7px
+		color: #fff 
+		font-size: 18px
+		padding-left: 33px
+		i
+			position: absolute
+			left: 0
+			top: 1px
+			height: 22px !important
+			width: 22px !important
+			overflow: hidden
+			border: 1px solid #667c87 
+			+border-radius(50%)
+			+box
+			&:before
+				position: absolute
+				content: ""
+				top: -3px
+				left: 0 
+				
+	.phone_aus
+		i
+			&:before
+				+s(aus)
+
+	.phone_ua
+		i
+			&:before
+				top: -2px
+				left: -1px
+				+s(ua)
+
+	.phone_ru
+		i
+			&:before
+				+s(ru)
+
+	.contacts__soc
+		position: relative
+		margin-top: 5px
+		float: right
+		padding-left: 22px
+		width: 85px
+		border-left: 1px dotted #a0abb0 
+		+box
+		&:before
+			position: absolute
+			content: "" 
+			top: 0
+			left: -1px
+			height: 100%
+			width: 1px
+			opacity: 0.3
+			background: #ccc 
+	.vk, .f
+		display: block
+	.vk
+		margin-top: -5px
+		margin-bottom: 25px
+		+s(vk)
+	.f
+		margin-bottom: -5px
+		+s(f)
+
+	.services
+		padding: 27px 28px 20px 
+		width: 320px
+		background: #36505E 
+		a
+			font-size: 14px
+			color: #53C0F5 
+			font-weight: 300 
+			&:hover
+				text-decoration: none
+
+	.links-oll
+		margin-top: 17px
+		font-size: 13px !important
+		color: #a1cde7 !important
+		font-weight: 500 !important
+		text-decoration: none
+		border-bottom: 1px dotted #a1cde7
+		display: inline-block
+		&:hover
+			border: none 
+	.reviews
+		width: 340px
+		padding: 27px 0 20px 28px
+		.links-oll
+			margin-top: 12px
+	.reviews__user
+		margin-top: 9px
+		color: #fff 
+		font-size: 14px
