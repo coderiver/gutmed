@@ -159,7 +159,7 @@ input:focus::placeholder, textarea:focus::placeholder { font-size: 0; }
 
 .article__tbold { padding-bottom: 70px; font-weight: 700; }
 
-.menu { margin-top: 30px; font-size: 0; *zoom: 1; }
+.menu { margin-left: -10px; margin-top: 30px; font-size: 0; *zoom: 1; }
 .menu:after { content: " "; display: table; clear: both; }
 .menu li { float: left; margin-left: 58px; display: inline-block; }
 .menu li a { color: black; padding: 6px 7px 6px 8px; font-size: 18px; -webkit-transition: 0.2s; -moz-transition: 0.2s; -o-transition: 0.2s; transition: 0.2s; }
