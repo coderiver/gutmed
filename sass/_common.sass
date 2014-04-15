@@ -1,16 +1,58 @@
+@font-face
+	font-family: 'raleway-regular'
+	src: url('../fonts/raleway-regular.eot')
+	src: local('__'), url('../fonts/raleway-regular.woff') format('woff'), url('../fonts/raleway-regular.ttf') format('ttf')
+	font-weight: normal
+	font-style: normal
+	
+@font-face
+	font-family: 'raleway-light'
+	src: url('../fonts/raleway-light.eot')
+	src: local('__'), url('../fonts/raleway-light.woff') format('woff'), url('../fonts/raleway-light.ttf') format('ttf')
+	font-weight: normal
+	font-style: normal
+	
+@font-face
+	font-family: 'raleway-medium'
+	src: url('../fonts/raleway-medium.eot')
+	src: local('__'), url('../fonts/raleway-medium.woff') format('woff'), url('../fonts/raleway-medium.ttf') format('ttf')
+	font-weight: normal
+	font-style: normal
+		
+@font-face
+	font-family: 'aliquam'
+	src: url('../fonts/aliquam.eot')
+	src: local('__'), url('../fonts/aliquam.woff') format('woff'), url('../fonts/aliquam.ttf') format('ttf')
+	font-weight: normal
+	font-style: normal
+		
+=rr
+	font-family: 'raleway-regular', Arial, sans-serif
+
+=rl
+	font-family: 'raleway-light', Arial, sans-serif	
+
+=rm
+	font-family: 'raleway-medium', Arial, sans-serif	
+
+=al
+	font-family: 'aliquam', Arial, sans-serif
+	
 body
-	font-size: 12px 
+	font-size: 14px 
 	font-family: 'Exo 2', sans-serif
 	font-weight: 400 
 	line-height: 1.4
 
 .body
-	background: url('../img/naw-bg.jpg') no-repeat 50% 332px
+	background: url('../img/naw-bg.jpg') no-repeat 50% 306px
+
 
 // wrapper
 .wrapper
 	margin: 0 auto
 	width: 1000px
+	+clr
 
 // header
 .header
@@ -18,9 +60,9 @@ body
 
 .header__centr
 	margin: 0 auto
+	padding-bottom: 20px
 	padding-top: 37px
 	width: 1000px
-	height: 170px
 	background: url('../img/bg-tcent.png') no-repeat 0 39px
 
 .header__logo
@@ -37,6 +79,27 @@ body
 	font-style: italic
 	text-align: center
 
+.footer
+	margin-top: 75px
+	height: 119px
+	background-color: #fff
+	background: url('../img/fbg-l.png') no-repeat 0 70%
+	overflow: hidden
+	+box
+	.footer__bg
+		padding-top: 30px
+		height: 119px
+		+opacity(.87)
+		+background-image(linear-gradient(right, #0087cb 25%, rgba(0,135,203,.3) 77.76%, rgba(255,255,255,0) 100%))
+
+.footer__title
+	padding-bottom: 15px
+	color: #FFF 
+	line-height: 1
+	font-size: 21px
+	font-weight: 400 
+	text-transform: uppercase
+
 @media only screen and (max-width: 1920px)
 	.out
 		padding-bottom: 180px
@@ -49,3 +112,63 @@ body
 		left: 50%
 		margin-left: -1010px
 		width: 2020px 
+		
+// pagination
+.pagination
+	margin: 30px 0 
+	font-size: 0
+	line-height: 1
+	li
+		padding: 9px
+		display: inline-block
+		a
+			text-decoration: none
+			color: #000
+			font-size: 14px
+			+al
+			&:hover
+				color: #53BDF1 
+		&:first-child
+			padding-left: 0
+		&.is-active
+			a
+				color: #53BDF1 
+	.pagination__pager
+		a
+			+rl
+
+
+// form
+.form
+	width: 500px
+	textarea
+		height: 140px
+
+//input
+input, textarea
+	margin-bottom: 10px
+	padding: 10px 13px
+	width: 100%
+	resize: none
+	border: 1px solid #959595  
+	+placeholder-color(#959595)
+	+box
+	+rl
+	&:focus
+		+placeholder
+			font-size: 0
+		
+			
+.btn
+	padding: 0 30px 
+	height: 40px
+	color: #FFF 
+	font-size: 16px
+	font-family: 'Exo 2', sans-serif
+	font-weight: 300 
+	background: #38a6eb
+	+background-image(linear-gradient(bottom, rgba(#38a6eb,.51) 0%, rgba(255,255,255,.51) 100%))
+	+transition(0.2s)
+	&:hover
+		+background-image(linear-gradient(bottom, rgba(#38a6eb,.51) 10%, rgba(255,255,255,.51) 90%))
+		+transition(0.2s)

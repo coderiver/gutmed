@@ -26,7 +26,8 @@
 	width: 320px
 	font-size: 0
 	+clr
-
+.naw__row
+	+clr
 .naw__item
 	float: left
 	width: 50%
@@ -53,16 +54,20 @@
 // footer
 .body
 	.footer
+		margin-top: 0
+		padding: 0
 		height: 180px
 		background: url('../img/fbg-l.png') no-repeat 0 100%, url('../img/fbg-r.png') no-repeat 100% 100% 
 
 	.footer__bg
+		padding-top: 0
 		height: 180px
 		background: rgba(#1c4065, 0.2) 
-		+gt(rgba(255,255,255,0) -0, rgba(41,77,95,.67) 50%, rgba(255,255,255,0) 100%)
+		+gt(rgba(255,255,255,0) 0%, rgba(41,77,95,.67) 50%, rgba(255,255,255,0) 100%)
 		
 		.wrapper
 			font-size: 0
+			
 	.contacts, .services, .reviews
 		padding: 30px 0 18px 
 		width: 32%
@@ -72,14 +77,6 @@
 		p
 			color: #A9E5FF 
 			font-size: 13px
-
-	.footer__title
-		padding-bottom: 15px
-		color: #FFF 
-		line-height: 1
-		font-size: 21px
-		font-weight: 400 
-		text-transform: uppercase
 		
 	.contacts
 		width: 341px
@@ -88,72 +85,25 @@
 
 	.contacts__phone
 		float: left
+		width: 230px
 		
 	.phone
 		position: relative
-		margin-bottom: 7px
-		color: #fff 
-		font-size: 18px
-		padding-left: 33px
-		i
-			position: absolute
-			left: 0
-			top: 1px
-			height: 22px !important
-			width: 22px !important
-			overflow: hidden
-			border: 1px solid #667c87 
-			+border-radius(50%)
-			+box
-			&:before
-				position: absolute
-				content: ""
-				top: -3px
-				left: 0 
-				
-	.phone_aus
-		i
-			&:before
-				+s(aus)
-
-	.phone_ua
-		i
-			&:before
-				top: -2px
-				left: -1px
-				+s(ua)
-
-	.phone_ru
-		i
-			&:before
-				+s(ru)
+		margin: 0 0 7px
 
 	.contacts__soc
-		position: relative
-		margin-top: 5px
-		float: right
-		padding-left: 22px
 		width: 85px
-		border-left: 1px dotted #a0abb0 
-		+box
-		&:before
-			position: absolute
-			content: "" 
-			top: 0
-			left: -1px
-			height: 100%
-			width: 1px
-			opacity: 0.3
-			background: #ccc 
+		
 	.vk, .f
 		display: block
+		margin-left: 0
+		
 	.vk
 		margin-top: -5px
 		margin-bottom: 25px
-		+s(vk)
+		
 	.f
 		margin-bottom: -5px
-		+s(f)
 
 	.services
 		padding: 27px 28px 20px 
@@ -185,3 +135,265 @@
 		margin-top: 9px
 		color: #fff 
 		font-size: 14px
+
+.phone
+	position: relative
+	margin-right: 55px
+	color: #fff 
+	font-size: 18px
+	padding-left: 33px
+	display: inline-block
+	i
+		position: absolute
+		left: 0
+		top: 1px
+		height: 22px !important
+		width: 22px !important
+		overflow: hidden
+		border: 1px solid #667c87 
+		+border-radius(50%)
+		+box
+		&:before
+			position: absolute
+			content: ""
+			top: -3px
+			left: 0 
+				
+.phone_aus
+	i
+		&:before
+			+s(aus)
+
+.phone_ua
+	i
+		&:before
+			top: -2px
+			left: -1px
+			+s(ua)
+
+.phone_ru
+	i
+		&:before
+			+s(ru)
+
+.contacts__soc
+	position: relative
+	margin-top: -5px
+	float: right
+	padding-left: 22px
+	border-left: 1px dotted #a0abb0 
+	+box
+	&:before
+		position: absolute
+		content: "" 
+		top: 0
+		left: -1px
+		height: 100%
+		width: 1px
+		opacity: 0.3
+		background: #ccc 
+		
+.vk, .f
+	display: inline-block
+	margin-left: 20px
+	
+.vk
+	+s(vk)
+
+.f
+	+s(f)
+
+// end index
+
+// article
+.article
+	+rl
+	p, .article__tbold
+		padding-top: 16px
+	.img
+		margin: 15px 0 0 36px
+	.l-col2, .l-col1
+		+box
+	.l-col1
+		padding-right: 20px 
+	.l-col2
+		padding-left: 20px
+
+.img_mod
+	margin-left: 0 !important
+
+.article__top
+	margin-bottom: 15px
+	padding: 28px 0 4px
+	font-size: 18px
+	font-weight: 300 
+	border-bottom: 4px solid #53BDF1 
+
+.article__title
+	color: #0087CB 
+	font-size: 16px
+	+rr
+
+.article__title_pd
+	padding-top: 30px
+
+.article__tbold
+	padding-bottom: 70px
+	font-weight: 700 
+
+//menu
+.menu
+	margin-top: 30px
+	font-size: 0
+	+clr
+	li
+		float: left
+		margin-left: 58px
+		display: inline-block
+		a
+			color: #000
+			padding: 6px 7px 6px 8px
+			font-size: 18px
+			+transition(0.2s)
+			&:hover
+				background: #53bdf1
+				color: #fff
+				text-decoration: none
+				+transition(0.2s)
+		&:first-child
+			margin-left: 0
+		&:last-child
+			float: right
+		.is-active
+			background: #53bdf1
+			color: #fff
+			text-decoration: none
+
+// slider
+.cycle
+	position: relative
+	margin-bottom: 20px
+	.cycle-slide
+		width: 100%
+	.cycle__nav
+		position: absolute
+		top: 50%
+		margin-top: -21px
+		width: 42px
+		height: 42px
+		z-index: 200
+		background: rgba(#fff, 0.8)
+		+transition(0.2s)
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: 12px
+			margin-top: -9px
+			+arr(15, 18, #0087cb, r)
+		&:hover
+			background: rgba(#fff, 1)
+			+transition(0.2s)
+
+	.cycle__nav_prev
+		left: 0
+		&:before
+			right: 15px
+			+rotate(180)
+
+	.cycle__nav_next
+		right: 0
+
+	.cycle-pager
+		text-align: center
+		margin: 7px auto 0
+		button
+			margin-right: 10px
+			width: 7px
+			height: 7px
+			border: 1px solid #0087cb
+			display: inline-block
+			background: #fff
+			&.is-active
+				background: blue
+			
+// begin review
+
+.comment
+	margin-bottom: 15px
+	line-height: 1
+	cursor: pointer
+	border-bottom: 1px dotted #777777 
+	display: inline-block 
+	
+.review
+	.img
+		margin-left: 13px
+		
+.review__title
+	padding-bottom: 40px
+	font-size: 16px
+	+rm
+
+.review__yser
+	margin-top: 30px
+	width: 270px
+	line-height: 1
+	padding-bottom: 10px
+	border-bottom: 1px solid #53BDF1  
+	span
+		padding-left: 18px
+		color: #959595 
+		// font-family: 'Exo 2', sans-serif
+		// font-weight: 100 
+		
+.review__yser_top
+	margin-top: 0
+
+.review-form
+	input
+		width: 370px
+	.review__title
+		line-height: 1
+		padding-bottom: 20px
+		
+.contacts__col
+	position: relative
+	margin-bottom: 14px
+	padding-bottom: 20px
+	line-height: 1.6
+	&:before
+		position: absolute
+		left: 0
+		bottom: 0
+		content: ""
+		width: 125px
+		height: 1px
+		background: #959595  
+
+.contacts__row
+	position: relative
+	margin-top: 20px
+	padding-left: 44px
+	color: #000 
+	i
+		position: absolute
+		left: 0
+		top: 5px
+		display: block
+
+.contacts__country
+	font-size: 16px
+	+rm
+.contacts__phone
+	padding-left: 16px
+	font-size: 14px
+	span
+		padding-left: 16px
+
+.soc-links
+	padding-bottom: 5px
+	+rm
+	span
+		padding-left: 28px
+		+rr
