@@ -62,8 +62,9 @@
 	.footer__bg
 		padding-top: 0
 		height: 180px
-		background: rgba(#1c4065, 0.2) 
-		+gt(rgba(255,255,255,0) 0%, rgba(41,77,95,.67) 50%, rgba(255,255,255,0) 100%)
+		opacity: 1
+		background-color: rgba(#1c4065, 0.5)
+		+background-image(linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(41, 77, 95, 0.71) 30%, rgba(41, 77, 95, 0.71) 70%, rgba(255, 255, 255, 0.5) 100%))
 		
 		.wrapper
 			font-size: 0
